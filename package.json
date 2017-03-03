@@ -1,0 +1,21 @@
+{
+  "name": "map",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhouyt",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "moment": "^2.17.1",
+    "mongoose": "^4.8.2",
+    "path": "^0.12.7",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

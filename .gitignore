@@ -1,0 +1,9 @@
+
+.idea/
+将删除 algorithm/
+将删除 app/
+将删除 bin/
+将删除 config/
+node_modules/
+将删除 package.json
+将删除 view/
