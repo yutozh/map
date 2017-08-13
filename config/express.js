@@ -7,7 +7,7 @@ module.exports = function () {
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, '../view')));
     app.use(body_parser.json());
-    app.use(body_parser.urlencoded());
+    app.use(body_parser.urlencoded({ extended: false }));
 
 
     require("../app/routes/routes.order.server")(app);
