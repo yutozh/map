@@ -1,5 +1,5 @@
 module.exports = {
-    port:8880,
+    port:8882,
     mongoConn: "mongodb://map:map@localhost/map",
 
     defaultAutoOrderLimit: 6,
