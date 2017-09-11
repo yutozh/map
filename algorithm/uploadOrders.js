@@ -45,7 +45,6 @@ function saveToDB(content) {
                     var order = new Order(content);
                     order.save(function (err,next) {
                         if(err) return next(err);
-                        console.log("ok");
                     })
                 });
             });
