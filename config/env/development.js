@@ -1,6 +1,6 @@
 module.exports = {
     port:8880,
-    mongoConn: "mongodb://localhost/map",
+    mongoConn: "mongodb://map:map@localhost/map",
 
     defaultAutoOrderLimit: 6,
     routeMatrixHost: "api.map.baidu.com",
