@@ -4,6 +4,6 @@ var app = require("../app");
 
 var config = require("../config/config");
 
-app.listen(config.port,function(){
+app.listen(process.env.PORT || config.port,function(){
     console.log("Server listening on port: " + process.env.PORT || config.port);
 });
