@@ -145,7 +145,7 @@ var vmautoPopover = new Vue({
                 return 0;
             }
 			$.ajax({
-				url:"http://map.oattao.cn/autoOrders",
+				url:"/autoOrders",
 				type:"get",
 				dataType:"json",
 				data:{longitude:nowLng,latitude:nowLat,range:this.range,maxOrder:this.maxNumOfOrders},
@@ -180,7 +180,7 @@ var bottomPopover = new Vue({
                     });
 
 					$.ajax({
-						url:"http://map.oattao.cn/postOrders",
+						url:"/postOrders",
 						type:"POST",
 						dataType:"json",
 						data:JSON.stringify(datas),

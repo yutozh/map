@@ -17,6 +17,7 @@ module.exports = {
         if (!longitude || !latitude) {
             return next(new Error("No location!"));
         }
+        console.log("ok");
         Order.find({
             'restLoc': {
                 $nearSphere: {
@@ -31,6 +32,7 @@ module.exports = {
         }, ["restName", "restAddress","destAddress", "Pay", "expectDuration","orderID"])
             .limit(maxNumOfOrders)
             .exec(function (err, docs) {
+              console.log("ok2");
                 if (err) {
                     return next(err)
                 }
@@ -58,7 +60,6 @@ module.exports = {
             }
             // When some of the posted orders are chosen by others before the user post.
             if(docs.length != postOrders.length){
-                console.log("-1");
                 return res.json({'status':'-1','str':'Orders have been chosen!'});
             }
             docs.forEach(function () {
@@ -142,7 +143,7 @@ module.exports = {
                     .then(function(baiduRes){
                         // 目标全部到达
                         if(poiList.length == 0){
-                            console.log(routeList);
+                            // console.log(routeList);
                             var routes = [];
                             for(var i=0; i<routeList.length-1; i++ ){
                                 var routeUnit = {};
